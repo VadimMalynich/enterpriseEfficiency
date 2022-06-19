@@ -23,6 +23,6 @@ public class Logout implements Command {
 
         session.invalidate();
 
-        response.sendRedirect("Controller?command=go_to_sign_in_page&message=message.logout.complete&locale=" + locale);
+        response.sendRedirect("enterpriseEfficiency?command=go_to_sign_in_page&message=message.logout.complete&locale=" + locale);
     }
 }

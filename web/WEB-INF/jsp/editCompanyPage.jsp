@@ -219,7 +219,7 @@
                             </div>
                         </div>
                         <div class="col-lg-8">
-                            <form action="Controller" method="post">
+                            <form action="enterpriseEfficiency" method="post">
                                 <input type="hidden" name="command" value="edit_company_info"/>
                                 <div class="mt-10">
                                     <input type="text" name="period" placeholder="${sessionScope.editCompany.period}"
@@ -359,7 +359,7 @@
                                     <div class="serial"></div>
                                 </div>
                                 <c:forEach var="staff" items="${sessionScope.editCompany.staff}">
-                                    <form action="Controller" method="post" style="display: inherit">
+                                    <form action="enterpriseEfficiency" method="post" style="display: inherit">
                                         <input type="hidden" name="command" value="edit_staff"/>
                                         <input type="hidden" name="editStaffIndex" value="${staff.index}"/>
                                         <input type="hidden" name="staffId" value="${staff.id}"/>
@@ -553,7 +553,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form action="Controller" method="post">
+                            <form action="enterpriseEfficiency" method="post">
                                 <input type="hidden" name="command" value="edit_capital"/>
                                 <div class="mt-10">
                                     <c:choose>
@@ -831,7 +831,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form action="Controller" method="post">
+                            <form action="enterpriseEfficiency" method="post">
                                 <input type="hidden" name="command" value="edit_coefficients"/>
                                 <div class="mt-10">
                                     <input type="number" name="editOwnSecurity" class="single-input" required step="0.01"
@@ -945,7 +945,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <form action="Controller" method="post">
+                            <form action="enterpriseEfficiency" method="post">
                                 <input type="hidden" name="command" value="edit_expenses"/>
                                 <div class="mt-10">
                                     <input type="number" name="editLaborCost" class="single-input" required

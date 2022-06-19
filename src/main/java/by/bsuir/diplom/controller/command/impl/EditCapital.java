@@ -107,10 +107,10 @@ public class EditCapital implements Command {
             cattleService.edit(cattle);
             session.removeAttribute("editCompany");
             session.removeAttribute("companiesList");
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.editCapital.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.editCapital.complete");
         } catch (ServiceException e) {
             userLogger.error(e);
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.edit.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.edit.unsuccessfully");
         }
     }
 }

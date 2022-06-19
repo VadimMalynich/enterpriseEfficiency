@@ -88,11 +88,11 @@
                                     </c:choose>
                                     <td class="visit">
                                         <button type="button" style="margin-left: 50px;">
-                                            <a href="Controller?command=go_to_edit_user_page&userId=${user.id}"
+                                            <a href="enterpriseEfficiency?command=go_to_edit_user_page&userId=${user.id}"
                                                style="color: #0b2e13">
                                                 <em class="fa fa-edit fa-2x"></em></a>
                                         </button>
-                                        <form action="Controller" method="post" style="display: inherit">
+                                        <form action="enterpriseEfficiency" method="post" style="display: inherit">
                                             <input type="hidden" name="command" value="delete_user">
                                             <input type="hidden" name="deleteUserId" value="${user.id}">
                                             <div class="serial">
@@ -139,11 +139,11 @@
     <%--                                </c:choose>--%>
     <%--                                <div class="visit">--%>
     <%--                                    <button type="button" style="margin-left: 50px;">--%>
-    <%--                                        <a href="Controller?command=go_to_edit_user_page&userId=${user.id}"--%>
+    <%--                                        <a href="enterpriseEfficiency?command=go_to_edit_user_page&userId=${user.id}"--%>
     <%--                                           style="color: #0b2e13">--%>
     <%--                                            <em class="fa fa-edit fa-2x"></em></a>--%>
     <%--                                    </button>--%>
-    <%--                                    <form action="Controller" method="post" style="display: inherit">--%>
+    <%--                                    <form action="enterpriseEfficiency" method="post" style="display: inherit">--%>
     <%--                                        <input type="hidden" name="command" value="delete_user">--%>
     <%--                                        <input type="hidden" name="deleteUserId" value="${user.id}">--%>
     <%--                                        <div class="serial">--%>

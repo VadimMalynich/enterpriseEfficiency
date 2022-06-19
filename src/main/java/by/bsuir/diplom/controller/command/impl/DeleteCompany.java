@@ -27,10 +27,10 @@ public class DeleteCompany implements Command {
         try {
             companyService.delete(ynn);
             session.removeAttribute("companiesList");
-            response.sendRedirect("Controller?command=go_to_home_page&message=message.deleteCompany.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.deleteCompany.complete");
         } catch (ServiceException e) {
             userLogger.info(e);
-            response.sendRedirect("Controller?command=go_to_home_page&message=message.delete.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.delete.unsuccessfully");
         }
     }
 }

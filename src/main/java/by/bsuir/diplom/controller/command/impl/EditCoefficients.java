@@ -40,10 +40,10 @@ public class EditCoefficients implements Command {
         try {
             coefficientsService.edit(coefficients);
             session.removeAttribute("editCompany");
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.editCoefficients.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.editCoefficients.complete");
         } catch (ServiceException e) {
             userLogger.error(e);
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.edit.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.edit.unsuccessfully");
         }
     }
 }

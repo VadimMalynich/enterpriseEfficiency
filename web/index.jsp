@@ -13,6 +13,6 @@
     <title>$Title$</title>
 </head>
 <body>
-<с:redirect url="Controller?command=go_to_sign_in_page"/>
+<с:redirect url="enterpriseEfficiency?command=go_to_sign_in_page"/>
 </body>
 </html>

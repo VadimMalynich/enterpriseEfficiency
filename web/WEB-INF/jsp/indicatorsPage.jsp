@@ -103,7 +103,7 @@
                             </td>
                             <c:if test="${sessionScope.user.role.value eq 2}">
                                 <td class="visit">
-                                    <a href="Controller?command=go_to_correlation_page&companyYnn=${company.ynn}"
+                                    <a href="enterpriseEfficiency?command=go_to_correlation_page&companyYnn=${company.ynn}"
                                        style="color: #0b2e13">
                                         <div class="third-btn"><c:out value="${correlationButton}"/></div>
                                     </a>

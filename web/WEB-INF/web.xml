@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <display-name>Comport</display-name>
+    <display-name>Enterprise efficiency</display-name>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
@@ -24,7 +24,7 @@
 
     <servlet-mapping>
         <servlet-name>MyController</servlet-name>
-        <url-pattern>/Controller</url-pattern>
+        <url-pattern>/enterpriseEfficiency</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>10</session-timeout>
@@ -63,21 +63,10 @@
         <!--        </init-param>-->
     </filter>
 
-<!--    <filter>-->
-<!--        <filter-name>SecurityFilter</filter-name>-->
-<!--        <filter-class>by.bsuir.diplom.controller.filter.SecurityFilter</filter-class>-->
-<!--    </filter>-->
-
-
     <filter-mapping>
         <filter-name>EncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-<!--    <filter-mapping>-->
-<!--        <filter-name>SecurityFilter</filter-name>-->
-<!--        <url-pattern>/Controller</url-pattern>-->
-<!--    </filter-mapping>-->
 
     <filter-mapping>
         <filter-name>multipartFilter</filter-name>

@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="col-lg-9">
-                <form action="Controller" method="post">
+                <form action="enterpriseEfficiency" method="post">
                     <div class="left">
                         <input type="hidden" name="command" value="sign_in"/>
                         <input type="text"

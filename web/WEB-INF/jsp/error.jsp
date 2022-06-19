@@ -65,7 +65,15 @@
                 <img src="<c:url value="/resources/error/images/404.gif"/>" alt="404 error"/>
                 <h4>The page you are looking for was moved, removed,
                     renamed or never existed.</h4>
-                <a href="Controller?command=go_to_home_page" class="btn">Home</a>
+                <c:choose>
+                    <c:when test="${sessionScope.user eq null}">
+                        <a href="enterpriseEfficiency?command=go_to_sign_in_page" class="btn">Sign in</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="enterpriseEfficiency?command=go_to_home_page" class="btn">Home</a>
+                    </c:otherwise>
+                </c:choose>
+
             </div>
             <!-- end Info -->
         </div>

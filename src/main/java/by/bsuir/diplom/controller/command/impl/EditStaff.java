@@ -40,10 +40,10 @@ public class EditStaff implements Command {
         try {
             service.edit(staff);
             session.removeAttribute("editCompany");
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.editStaff.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.editStaff.complete");
         } catch (ServiceException e) {
             userLogger.error(e);
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.edit.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.edit.unsuccessfully");
         }
     }
 }

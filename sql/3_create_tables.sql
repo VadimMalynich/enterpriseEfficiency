@@ -347,6 +347,9 @@ CREATE TABLE IF NOT EXISTS `company_db`.`staff`
     ENGINE = InnoDB
     AUTO_INCREMENT = 1;
 
+-- -----------------------------------------------------
+-- Table `company_db`.`correlation`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `company_db`.`correlation`
 (
     `ynn`                              INT    NOT NULL,

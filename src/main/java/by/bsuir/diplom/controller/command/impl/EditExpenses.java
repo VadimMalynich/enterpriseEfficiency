@@ -58,10 +58,10 @@ public class EditExpenses implements Command {
         try {
             expensesService.edit(expenses);
             session.removeAttribute("editCompany");
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.editCompany.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.editCompany.complete");
         } catch (ServiceException e) {
             userLogger.error(e);
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.edit.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + ynn + "&message=message.edit.unsuccessfully");
         }
     }
 }

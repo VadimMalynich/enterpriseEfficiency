@@ -94,7 +94,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-8">
-                                                <form action="Controller" method="post" enctype="multipart/form-data">
+                                                <form action="enterpriseEfficiency" method="post" enctype="multipart/form-data">
                                                     <input type="hidden" name="command" value="import_data"/>
                                                     <input class="mt-10" type="file" name="importFile"
                                                            accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
@@ -139,36 +139,38 @@
                             <c:forEach var="company" items="${sessionScope.companiesList}">
                                 <tr class="table-row">
                                     <td class="serial"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.ynn}</h5></a>
                                     </td>
                                     <td class="serial"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.okpo}</h5></a>
                                     </td>
                                     <td class="country"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.name}</h5></a>
                                     </td>
                                     <td class="percentage"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.fullName}</h5></a>
                                     </td>
                                     <c:if test="${sessionScope.user.role.value eq 1 or sessionScope.user.role.value eq 2}">
                                         <td class="visit">
                                             <button type="button">
-                                                <a href="Controller?command=go_to_edit_company_page&editCompanyYnn=${company.ynn}"
+                                                <a href="enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=${company.ynn}"
                                                    style="color: #0b2e13">
                                                     <em class="fa fa-edit fa-1x"></em></a></button>
-                                            <form action="Controller" method="post" style="display: inherit">
-                                                <input type="hidden" name="command" value="delete_company">
-                                                <input type="hidden" name="deleteCompanyYnn" value="${company.ynn}">
-                                                <div class="serial">
-                                                    <button type="submit">
-                                                        <em class="fa fa-close fa-1x"></em>
-                                                    </button>
-                                                </div>
-                                            </form>
+                                            <c:if test="${sessionScope.user.role.value eq 1}">
+                                                <form action="enterpriseEfficiency" method="post" style="display: inherit">
+                                                    <input type="hidden" name="command" value="delete_company">
+                                                    <input type="hidden" name="deleteCompanyYnn" value="${company.ynn}">
+                                                    <div class="serial">
+                                                        <button type="submit">
+                                                            <em class="fa fa-close fa-1x"></em>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </c:if>
                                         </td>
                                     </c:if>
                                 </tr>
@@ -184,14 +186,14 @@
                                 <ul class="top">
                                     <c:forEach var="area" items="${sessionScope.locationMap.keySet()}">
                                         <li>
-                                            <a href="Controller?command=filter_by_location&filterArea=${area}"
+                                            <a href="enterpriseEfficiency?command=filter_by_location&filterArea=${area}"
                                                class="justify-content-between align-items-center d-flex">
                                                 <h6>${area}</h6>
                                             </a>
                                             <ul class="sub">
                                                 <c:forEach var="district" items="${sessionScope.locationMap.get(area)}">
                                                     <li>
-                                                        <a href="Controller?command=filter_by_location&filterDistrict=${district}"
+                                                        <a href="enterpriseEfficiency?command=filter_by_location&filterDistrict=${district}"
                                                            class="justify-content-between align-items-center d-flex">
                                                             <h6>${district}</h6>
                                                         </a>
@@ -229,36 +231,38 @@
                             <c:forEach var="company" items="${sessionScope.filterCompanies}">
                                 <tr class="table-row">
                                     <td class="serial"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.ynn}</h5></a>
                                     </td>
                                     <td class="serial"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.okpo}</h5></a>
                                     </td>
                                     <td class="country"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.name}</h5></a>
                                     </td>
                                     <td class="percentage"><a
-                                            href="Controller?command=go_to_company_page&companyYnn=${company.ynn}">
+                                            href="enterpriseEfficiency?command=go_to_company_page&companyYnn=${company.ynn}">
                                         <h5>${company.fullName}</h5></a>
                                     </td>
                                     <c:if test="${sessionScope.user.role.value eq 1 or sessionScope.user.role.value eq 2}">
                                         <td class="visit">
                                             <button type="button">
-                                                <a href="Controller?command=go_to_edit_company_page&editCompanyYnn=${company.ynn}"
+                                                <a href="enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=${company.ynn}"
                                                    style="color: #0b2e13">
                                                     <em class="fa fa-edit fa-1x"></em></a></button>
-                                            <form action="Controller" method="post" style="display: inherit">
-                                                <input type="hidden" name="command" value="delete_company">
-                                                <input type="hidden" name="deleteCompanyYnn" value="${company.ynn}">
-                                                <div class="serial">
-                                                    <button type="submit">
-                                                        <em class="fa fa-close fa-1x"></em>
-                                                    </button>
-                                                </div>
-                                            </form>
+                                            <c:if test="${sessionScope.user.role.value eq 1}">
+                                                <form action="enterpriseEfficiency" method="post" style="display: inherit">
+                                                    <input type="hidden" name="command" value="delete_company">
+                                                    <input type="hidden" name="deleteCompanyYnn" value="${company.ynn}">
+                                                    <div class="serial">
+                                                        <button type="submit">
+                                                            <em class="fa fa-close fa-1x"></em>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </c:if>
                                         </td>
                                     </c:if>
                                 </tr>
@@ -274,14 +278,14 @@
                                 <ul class="top">
                                     <c:forEach var="area" items="${sessionScope.locationMap.keySet()}">
                                         <li>
-                                            <a href="Controller?command=filter_by_location&filterArea=${area}"
+                                            <a href="enterpriseEfficiency?command=filter_by_location&filterArea=${area}"
                                                class="justify-content-between align-items-center d-flex">
                                                 <h6>${area}</h6>
                                             </a>
                                             <ul class="sub">
                                                 <c:forEach var="district" items="${sessionScope.locationMap.get(area)}">
                                                     <li>
-                                                        <a href="Controller?command=filter_by_location&filterDistrict=${district}"
+                                                        <a href="enterpriseEfficiency?command=filter_by_location&filterDistrict=${district}"
                                                            class="justify-content-between align-items-center d-flex">
                                                             <h6>${district}</h6>
                                                         </a>

@@ -39,13 +39,13 @@ public class FilterByLocation implements Command {
         }
         try {
             if (area == null || "".equals(area)) {
-                session.setAttribute("page", "Controller?command=filter_by_location&filterDistrict=" + district);
+                session.setAttribute("page", "enterpriseEfficiency?command=filter_by_location&filterDistrict=" + district);
                 List<Company> filterCompanies = companyService.getFilterByDistrict(district);
                 session.setAttribute("filterCompanies", filterCompanies);
                 session.setAttribute(FILTER_DISTRICT, district);
                 session.removeAttribute(FILTER_AREA);
             } else {
-                session.setAttribute("page", "Controller?command=filter_area&filterArea=" + area);
+                session.setAttribute("page", "enterpriseEfficiency?command=filter_area&filterArea=" + area);
                 List<Company> filterCompanies = companyService.getFilterByArea(area);
                 session.setAttribute("filterCompanies", filterCompanies);
                 session.setAttribute(FILTER_AREA, area);

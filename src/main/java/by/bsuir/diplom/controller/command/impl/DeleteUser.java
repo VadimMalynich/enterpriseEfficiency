@@ -26,10 +26,10 @@ public class DeleteUser implements Command {
 
         try {
             userService.delete(id);
-            response.sendRedirect("Controller?command=go_to_users_page&message=message.deleteUser.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_users_page&message=message.deleteUser.complete");
         } catch (ServiceException e) {
             userLogger.info(e);
-            response.sendRedirect("Controller?command=go_to_users_page&message=message.deleteUser.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_users_page&message=message.deleteUser.unsuccessfully");
         }
     }
 }

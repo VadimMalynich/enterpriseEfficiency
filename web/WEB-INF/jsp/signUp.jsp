@@ -84,7 +84,7 @@
                     </c:if>
                 </div>
                 <div class="col-lg-5">
-                    <form action="Controller" method="post">
+                    <form action="enterpriseEfficiency" method="post">
                         <input type="hidden" name="command" value="sign_up"/>
                         <div class="mt-10">
                             <input type="text"

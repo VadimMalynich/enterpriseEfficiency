@@ -90,7 +90,7 @@
 
                 </div>
                 <div class="col-lg-5">
-                    <form action="Controller" method="post">
+                    <form action="enterpriseEfficiency" method="post">
                         <input type="hidden" name="command" value="edit_user"/>
                         <div class="mt-10">
                             <input type="text" value="${sessionScope.editUser.login}"

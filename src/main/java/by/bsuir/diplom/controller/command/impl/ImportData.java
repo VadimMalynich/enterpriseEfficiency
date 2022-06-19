@@ -51,17 +51,17 @@ public class ImportData implements Command {
             Reader reader = new Reader();
             try {
                 reader.read(file.getAbsolutePath());
-                response.sendRedirect("Controller?command=go_to_home_page&message=message.import.complete");
+                response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.import.complete");
             } catch (ServiceException e) {
                 userLogger.error(e);
                 if(e.getMessage().contains("NumberFormatException")){
-                    response.sendRedirect("Controller?command=go_to_home_page&message=message.import.complete");
+                    response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.import.complete");
                 }else {
-                    response.sendRedirect("Controller?command=go_to_home_page&message=message.import.unsuccessfully");
+                    response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.import.unsuccessfully");
                 }
             }
         } else {
-            response.sendRedirect("Controller?command=go_to_home_page&message=message.import.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.import.unsuccessfully");
         }
     }
 }

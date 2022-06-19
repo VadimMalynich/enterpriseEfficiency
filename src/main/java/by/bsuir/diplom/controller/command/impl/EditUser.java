@@ -41,9 +41,9 @@ public class EditUser implements Command {
             } catch (ServiceException e) {
                 userLogger.info(e);
                 if ("Entered wrong old password".equals(e.getMessage())) {
-                    response.sendRedirect("Controller?command=go_to_edit_user_page&message.editUser.unsuccessfully");
+                    response.sendRedirect("enterpriseEfficiency?command=go_to_edit_user_page&message.editUser.unsuccessfully");
                 } else {
-                    response.sendRedirect("Controller?command=go_to_edit_user_page&message=message.edit.unsuccessfully");
+                    response.sendRedirect("enterpriseEfficiency?command=go_to_edit_user_page&message=message.edit.unsuccessfully");
                 }
             }
         } else {
@@ -51,14 +51,14 @@ public class EditUser implements Command {
                 userService.edit(previousUser);
             } catch (ServiceException e) {
                 userLogger.error(e);
-                response.sendRedirect("Controller?command=go_to_edit_user_page&message=message.edit.unsuccessfully");
+                response.sendRedirect("enterpriseEfficiency?command=go_to_edit_user_page&message=message.edit.unsuccessfully");
             }
         }
         session.removeAttribute("citiesList");
         session.removeAttribute("editUser");
         session.removeAttribute("userId");
         if (sessionUser.getRole().getValue() == 0) {
-            response.sendRedirect("Controller?command=go_to_users_page&message=message.editUser.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_users_page&message=message.editUser.complete");
         } else {
             try {
                 Users user = userService.getUser(sessionUser.getId());
@@ -66,7 +66,7 @@ public class EditUser implements Command {
             } catch (ServiceException e) {
                 userLogger.error(e);
             }
-            response.sendRedirect("Controller?command=go_to_user_profile_page&message=message.editUser.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_user_profile_page&message=message.editUser.complete");
         }
     }
 }

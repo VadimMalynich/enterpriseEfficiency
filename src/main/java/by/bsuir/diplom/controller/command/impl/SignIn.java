@@ -31,14 +31,14 @@ public class SignIn implements Command {
 		try {
 			user = userService.authorization(login, password);
 			if (user == null) {
-				response.sendRedirect("Controller?command=go_to_sign_in_page&message=message.signIn.incorrect");
+				response.sendRedirect("enterpriseEfficiency?command=go_to_sign_in_page&message=message.signIn.incorrect");
 				return;
 			}
 			session.setAttribute("user", user);
-			response.sendRedirect("Controller?command=go_to_home_page&message=message.signIn.complete");
+			response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.signIn.complete");
 		} catch (ServiceException e) {
 			userLogger.info(e);
-			response.sendRedirect("Controller?command=go_to_sign_in_page&message=message.signIn.incorrect");
+			response.sendRedirect("enterpriseEfficiency?command=go_to_sign_in_page&message=message.signIn.incorrect");
 		}
 	}
 }

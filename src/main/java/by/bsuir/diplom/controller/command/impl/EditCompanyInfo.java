@@ -54,10 +54,10 @@ public class EditCompanyInfo implements Command {
             addressService.edit(newAddress);
             session.removeAttribute("editCompany");
             session.removeAttribute("companiesList");
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.editCompany.complete");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.editCompany.complete");
         } catch (ServiceException e) {
             userLogger.error(e);
-            response.sendRedirect("Controller?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.edit.unsuccessfully");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_edit_company_page&editCompanyYnn=" + company.getYnn() + "&message=message.edit.unsuccessfully");
         }
     }
 }

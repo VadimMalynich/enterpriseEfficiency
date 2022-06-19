@@ -61,13 +61,13 @@
             <div class="header-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-2">
-                            <div class="logo-area">
-                                <a href="Controller?command=go_to_home_page">
-                                    <img src="<c:url value="/resources/images/logo.png"/>" alt="logo">
-                                </a>
-                            </div>
-                        </div>
+<%--                        <div class="col-lg-2">--%>
+<%--                            <div class="logo-area">--%>
+<%--                                <a href="enterpriseEfficiency?command=go_to_home_page">--%>
+<%--                                    <img src="<c:url value="/resources/images/logo.png"/>" alt="logo">--%>
+<%--                                </a>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
                         <div class="col-lg-10">
                             <div class="custom-navbar">
                                 <span></span>
@@ -82,19 +82,19 @@
                                         </li>
                                     </c:if>
                                     <li>
-                                        <a href="Controller?command=ru_RU">
+                                        <a href="enterpriseEfficiency?command=ru_RU">
                                             <img src="<c:url value="/resources/images/elements/flag_russia.png"/> " height="30"
                                                  width="40" alt="RU">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Controller?command=en_US">
+                                        <a href="enterpriseEfficiency?command=en_US">
                                             <img src="<c:url value="/resources/images/elements/flag_usa.png"/> " height="30"
                                                  width="40" alt="EN">
                                         </a>
                                     </li>
                                         <%--                            <li class="menu-btn">--%>
-                                        <%--                                <a href="Controller?command=go_to_sign_up_page"--%>
+                                        <%--                                <a href="enterpriseEfficiency?command=go_to_sign_up_page"--%>
                                         <%--                                   class="template-btn">${signUp}</a>--%>
                                         <%--                            </li>--%>
                                 </ul>
@@ -112,7 +112,7 @@
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="logo-area">
-                                <a href="Controller?command=go_to_home_page">
+                                <a href="enterpriseEfficiency?command=go_to_home_page">
                                     <img src="<c:url value="/resources/images/logo.png"/>" alt="logo">
                                 </a>
                             </div>
@@ -126,13 +126,13 @@
                             <div class="main-menu">
                                 <ul>
                                     <li>
-                                        <a href="Controller?command=ru_RU">
+                                        <a href="enterpriseEfficiency?command=ru_RU">
                                             <img src="<c:url value="/resources/images/elements/flag_russia.png"/> " height="30"
                                                  width="40" alt="RU">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Controller?command=en_US">
+                                        <a href="enterpriseEfficiency?command=en_US">
                                             <img src="<c:url value="/resources/images/elements/flag_usa.png"/> " height="30"
                                                  width="40" alt="EN">
                                         </a>
@@ -140,16 +140,16 @@
                                     <c:choose>
                                         <c:when test="${sessionScope.user eq null}">
                                             <li class="menu-btn">
-                                                <a href="Controller?command=go_to_sign_in_page"
+                                                <a href="enterpriseEfficiency?command=go_to_sign_in_page"
                                                    class="template-btn">${signIn}</a>
                                             </li>
                                             <li>
-                                                <a href="Controller?command=go_to_sign_up_page"
+                                                <a href="enterpriseEfficiency?command=go_to_sign_up_page"
                                                    class="template-btn">${signUp}</a>
                                             </li>
                                         </c:when>
                                         <c:otherwise>
-                                            <a href="Controller?command=logout" class="template-btn">${logout}</a>
+                                            <a href="enterpriseEfficiency?command=logout" class="template-btn">${logout}</a>
                                         </c:otherwise>
                                     </c:choose>
                                 </ul>
@@ -163,18 +163,18 @@
                             </div>
                             <div class="main-menu">
                                 <ul>
-                                    <li class="active"><a href="Controller?command=go_to_home_page">${home}</a></li>
+                                    <li class="active"><a href="enterpriseEfficiency?command=go_to_home_page">${home}</a></li>
                                     <c:choose>
                                         <%--                                <c:when test="${sessionScope.user eq null}">--%>
                                         <%--                                    <li><a href="#">FAQ</a></li>--%>
                                         <%--                                </c:when>--%>
                                         <c:when test="${sessionScope.user.role.value eq 0}">
-                                            <li><a href="Controller?command=go_to_sign_up_page">${signUpLabel}</a></li>
-                                            <li><a href="Controller?command=go_to_users_page">${usersButton}</a></li>
+                                            <li><a href="enterpriseEfficiency?command=go_to_sign_up_page">${signUpLabel}</a></li>
+                                            <li><a href="enterpriseEfficiency?command=go_to_users_page">${usersButton}</a></li>
                                             <%--                                    <li><a href="#">FAQ</a></li>--%>
                                         </c:when>
                                         <c:when test="${sessionScope.user.role.value eq 1 or sessionScope.user.role.value eq 2}">
-                                            <li><a href="Controller?command=go_to_indicators_page">${indicatorsButton}</a></li>
+                                            <li><a href="enterpriseEfficiency?command=go_to_indicators_page">${indicatorsButton}</a></li>
                                             <%--                                    <li><a href="#">FAQ</a></li>--%>
                                         </c:when>
                                     </c:choose>

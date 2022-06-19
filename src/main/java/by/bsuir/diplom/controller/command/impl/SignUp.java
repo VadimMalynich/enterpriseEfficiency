@@ -36,13 +36,13 @@ public class SignUp implements Command {
         try {
             userService.registration(signUpUser, confirmPassword);
             if (user == null) {
-                response.sendRedirect("Controller?command=go_to_sign_in_page&message=message.signUp.complete");
+                response.sendRedirect("enterpriseEfficiency?command=go_to_sign_in_page&message=message.signUp.complete");
             } else {
-                response.sendRedirect("Controller?command=go_to_home_page&message=message.signUp.complete");
+                response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.signUp.complete");
             }
         } catch (ServiceException e) {
             userLogger.info(e);
-            response.sendRedirect("Controller?command=go_to_sign_up_page&message=message.error.signUp");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_sign_up_page&message=message.error.signUp");
         }
     }
 }

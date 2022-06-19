@@ -24,7 +24,7 @@ public class GoToEditCompanyPage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response, File uploadFilePath) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        session.setAttribute("page", "Controller?command=go_to_edit_company_page");
+        session.setAttribute("page", "enterpriseEfficiency?command=go_to_edit_company_page");
 
         if (request.getParameter(EDIT_COMPANY) != null) {
             session.setAttribute(EDIT_COMPANY, Integer.valueOf(request.getParameter(EDIT_COMPANY)));
@@ -45,7 +45,7 @@ public class GoToEditCompanyPage implements Command {
             requestDispatcher.forward(request, response);
         } catch (ServiceException e) {
             userLogger.error(e);
-            response.sendRedirect("Controller?command=go_to_home_page&message=message.error.server");
+            response.sendRedirect("enterpriseEfficiency?command=go_to_home_page&message=message.error.server");
         }
     }
 }

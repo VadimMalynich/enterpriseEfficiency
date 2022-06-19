@@ -369,19 +369,19 @@ public class Company implements Serializable {
                 ", productionProfitability=" + productionProfitability +
                 ", increasePerEmployed=" + increasePerEmployed +
                 ", landGrowth=" + landGrowth +
-//                ", address=" + address +
-//                ", cattle=" + cattle +
-//                ", coefficients=" + coefficients +
-//                ", companyInfo=" + companyInfo +
-//                ", correlation=" + correlation +
-//                ", dairyProducts=" + dairyProducts +
-//                ", expenses=" + expenses +
-//                ", fixedAssets=" + fixedAssets +
-//                ", salesReturn=" + salesReturn +
-//                ", cropProductions=" + cropProductions +
-//                ", enterpriseStatistics=" + enterpriseStatistics +
-//                ", grounds=" + grounds +
-//                ", staff=" + staff +
+                ", address=" + address +
+                ", cattle=" + cattle +
+                ", coefficients=" + coefficients +
+                ", companyInfo=" + companyInfo +
+                ", correlation=" + correlation +
+                ", dairyProducts=" + dairyProducts +
+                ", expenses=" + expenses +
+                ", fixedAssets=" + fixedAssets +
+                ", salesReturn=" + salesReturn +
+                ", cropProductions=" + cropProductions +
+                ", enterpriseStatistics=" + enterpriseStatistics +
+                ", grounds=" + grounds +
+                ", staff=" + staff +
                 '}';
     }
 }

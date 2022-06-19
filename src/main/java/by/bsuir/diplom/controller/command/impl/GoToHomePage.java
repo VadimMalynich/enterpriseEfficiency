@@ -26,7 +26,7 @@ public class GoToHomePage implements Command {
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response, File uploadFilePath) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        session.setAttribute("page", "Controller?command=go_to_home_page");
+        session.setAttribute("page", "enterpriseEfficiency?command=go_to_home_page");
         if (request.getParameter("message") != null) {
             request.setAttribute("message", request.getParameter("message"));
         }
